@@ -1,0 +1,28 @@
+{
+	"$schema": "https://swc.rs/schema.json",
+	"sourceMaps": true,
+	"jsc": {
+		"parser": {
+			"syntax": "typescript",
+			"decorators": true,
+			"dynamicImport": true
+		},
+		"transform": {
+			"legacyDecorator": true,
+			"decoratorMetadata": true
+		},
+		"target": "es2021",
+		"baseUrl": "./",
+		"paths": {
+			"@/*": ["src/*"]
+		}
+	},
+	"module": {
+		"type": "commonjs",
+		"ignoreDynamic": true
+	},
+	"exclude": [
+		".*/(test|__test__|tests|__tests__|__mocks__)/.*",
+		".*\\.(spec|test)\\.ts$"
+	]
+}
