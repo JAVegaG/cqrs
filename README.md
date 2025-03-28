@@ -92,6 +92,22 @@ Para reproducir la prueba se debe tener instalado **Docker**.
     docker rm <ID_CONTENEDOR>
     ```
 
+## Consideraciones para Implementación en Producción
+
+Si se desea aplicar CQRS en una aplicación real, se deben considerar:
+
+-   Evaluar si la separación de lectura y escritura es necesaria: No todos los sistemas requieren CQRS; su implementación debe justificarse por necesidades de escalabilidad y rendimiento.
+
+-   Definir estrategias de consistencia: Como la replicación de datos o eventos de compensación para mantener la integridad.
+
+-   Planificar la infraestructura: Puede requerir bases de datos optimizadas para lectura (ej. NoSQL) y otras para escritura (ej. SQL).
+
+-   Asegurar monitoreo y logging: Para detectar problemas en la sincronización de datos y optimizar el rendimiento.
+
+-   Capacitar al equipo: La adopción de CQRS requiere que los desarrolladores y arquitectos comprendan sus implicaciones y mejores prácticas.
+
+En resumen, CQRS es una poderosa herramienta para aplicaciones escalables y distribuidas, pero debe aplicarse con un análisis detallado de costos, beneficios y complejidades antes de su implementación en entornos productivos.
+
 ## Conclusiones
 
 El patrón CQRS ofrece múltiples ventajas y desafíos al aplicarse en sistemas reales:
@@ -115,19 +131,3 @@ El patrón CQRS ofrece múltiples ventajas y desafíos al aplicarse en sistemas 
 -   Mayor costo de infraestructura: Puede implicar el uso de múltiples bases de datos u orígenes de datos optimizados.
 
 -   Sincronización de datos: Se necesita un mecanismo adecuado para asegurar la coherencia entre los modelos de lectura y escritura.
-
-### Consideraciones para Implementación en Producción
-
-Si se desea aplicar CQRS en una aplicación real, se deben considerar:
-
--   Evaluar si la separación de lectura y escritura es necesaria: No todos los sistemas requieren CQRS; su implementación debe justificarse por necesidades de escalabilidad y rendimiento.
-
--   Definir estrategias de consistencia: Como la replicación de datos o eventos de compensación para mantener la integridad.
-
--   Planificar la infraestructura: Puede requerir bases de datos optimizadas para lectura (ej. NoSQL) y otras para escritura (ej. SQL).
-
--   Asegurar monitoreo y logging: Para detectar problemas en la sincronización de datos y optimizar el rendimiento.
-
--   Capacitar al equipo: La adopción de CQRS requiere que los desarrolladores y arquitectos comprendan sus implicaciones y mejores prácticas.
-
-En resumen, CQRS es una poderosa herramienta para aplicaciones escalables y distribuidas, pero debe aplicarse con un análisis detallado de costos, beneficios y complejidades antes de su implementación en entornos productivos.
